@@ -14,17 +14,45 @@ body {
     background-position: center;
     display: flex;
     flex-direction: column;
-}
-
-header {
-    margin-top: 2em;
-    background-color: rgb(255, 255, 255, 0.5);
+    position: relative;
 }
 
 h1 {
     font-size: 4.5em;
-    text-align: center;
-    margin: 0;
+    margin: 0.2em 0 0 1em;
+    width: fit-content;
+    position: absolute;
+    z-index: 5;
+    background-color: rgb(255, 255, 255, 0.7);
+    padding: .1em .2em;
+}
+
+header {
+    margin-top: 2.5em;
+    background-color: rgb(255, 255, 255, 0.7);
+    position: absolute;
+    z-index: 1;
+    width: fit-content;
+    align-self: flex-end;
+}
+
+header ul {
+    display: flex;
+    float: right;
+    list-style-type: none;
+    margin: 0 5em 0 0;
+}
+
+header ul li {
+    padding: 1em;
+}
+
+header ul li a {
+    font-family: 'IM Fell French Canon', serif;
+    text-decoration: none;
+    color: black;
+    font-size: 1.2em;
+    font-weight: bold;
 }
 
 p {
@@ -32,6 +60,7 @@ p {
     font-size: 2em;
     font-family: 'IM Fell French Canon', serif;
     align-self: center;
-    margin-top: 50vh;
     width: fit-content;
+    bottom: 10vh;
+    position: absolute;
 }
