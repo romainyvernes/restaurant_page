@@ -7,6 +7,8 @@ const homepage = (() => {
         const description = document.createElement('p');
         const navbar = document.createElement('ul');
 
+        container.style.backgroundImage = "url('./restaurant.jpeg')";
+
         title.textContent = 'Chez Marcel';
         container.appendChild(title);
 
@@ -14,6 +16,12 @@ const homepage = (() => {
         for (let i = 0; i < TAB_NAMES.length; i++) {
             const tab = document.createElement('li');
             const link = document.createElement('a');
+
+            // add bottom red border for selected tab
+            if (i === 0) {
+                tab.style.borderBottom = '3px solid red';
+                link.style.color = 'rgb(100, 100, 100)';
+            }
 
             //link.href = `${TAB_NAMES[i].toLowerCase()}.js`;
             link.href = '#';
@@ -25,6 +33,7 @@ const homepage = (() => {
         header.appendChild(navbar);
         container.appendChild(header);
 
+        description.id = 'home-description';
         description.textContent = `Savor authentic French cuisine in a typically 
                 Parisian decor.`;
         container.appendChild(description);
