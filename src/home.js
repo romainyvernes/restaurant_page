@@ -17,6 +17,8 @@ const homepage = (() => {
             const tab = document.createElement('li');
             const link = document.createElement('a');
 
+            tab.id = `${TAB_NAMES[i].toLowerCase()}-btn`;
+
             // add bottom red border for selected tab
             if (i === 0) {
                 tab.style.borderBottom = '3px solid red';

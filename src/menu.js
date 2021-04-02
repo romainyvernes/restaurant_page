@@ -14,6 +14,8 @@ const menu = (() => {
             const tab = document.createElement('li');
             const link = document.createElement('a');
 
+            tab.id = `${TAB_NAMES[i].toLowerCase()}-btn`;
+
             // add bottom red border for selected tab
             if (i === 1) {
                 title.textContent = TAB_NAMES[i];
