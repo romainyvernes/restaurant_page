@@ -25,7 +25,6 @@ const menu = (() => {
                 link.style.color = 'rgb(100, 100, 100)';
             }
 
-            //link.href = `${TAB_NAMES[i].toLowerCase()}.js`;
             link.href = '#';
             link.textContent = TAB_NAMES[i];
 
